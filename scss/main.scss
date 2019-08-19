@@ -1,6 +1,7 @@
 @import "config";
 @import "utilities";
 @import "item_grid";
+
 // General Styles
 * {
   margin: 0;
@@ -25,14 +26,14 @@ ul {
 h2,
 h3,
 h4 {
-  text-decoration: uppercase;
+  text-transform: uppercase;
 }
 
 img {
   width: 100%;
 }
 
-// logo
+// Logo
 #logo {
   width: 70px;
   height: 70px;
@@ -55,9 +56,9 @@ img {
   }
 
   a {
+    text-decoration: none;
     color: #fff;
     text-transform: uppercase;
-    text-decoration: none;
     border-bottom: 3px transparent solid;
     padding-bottom: 0.5rem;
     transition: border-color 0.5s;
@@ -72,7 +73,7 @@ img {
   }
 }
 
-// header
+// Header
 #header {
   // Header Home
   &-home {
@@ -94,7 +95,7 @@ img {
 
   // Header Inner
   &-inner {
-    background: $bg-image no-repeat 20% 30% right/ cover;
+    background: $bg-image no-repeat 20% 30% / cover;
     height: 5.5rem;
     border-bottom: 3px solid $main-color;
   }
@@ -135,12 +136,14 @@ img {
           font-weight: bold;
         }
       }
+
       div {
         padding: 3rem 0;
 
         &:nth-child(odd) {
           background: $light-color;
         }
+
         &:nth-child(even) {
           background: $medium-color;
         }
@@ -156,7 +159,7 @@ img {
       grid-gap: 1.5rem;
       text-align: center;
 
-      //procees-step
+      // process-step
       &-step {
         position: absolute;
         top: 0;
@@ -203,6 +206,7 @@ img {
 
 // About Sections
 #about {
+  // About A
   &-a {
     .about-info {
       display: grid;
@@ -276,7 +280,7 @@ img {
     .testimonials {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-gap: 2rem;
+      grid-gap: 0.5rem;
 
       ul {
         list-style: none;
@@ -292,8 +296,8 @@ img {
       }
 
       img {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
         margin-right: 0.5rem;
       }
@@ -335,6 +339,7 @@ img {
         padding: 0.5rem 1rem;
       }
     }
+
     button[type="submit"] {
       width: 50%;
     }
@@ -385,5 +390,5 @@ img {
   }
 }
 
-// Media Query
+// Import Media Queries
 @import "media";
